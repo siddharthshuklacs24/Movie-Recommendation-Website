@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 🚫 Prevent logged-in users from accessing register page -->
+    <script>
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = "homepage.html";
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CineMatch</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <img class="website_logo" src="../static/media/images/website_logo.png" alt="website logo"
+        onclick="location.href='homepage.html'" style="cursor:pointer"> 
+        
+        <div class="f2">
+            <div class="f2-left">
+                <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg" alt="bmsce logo">
+                <h1 class="bmsce">BMSCE</h1>
+            </div>
+
+            <div class="buttons">
+                <form action="../templates/about us.html">
+                    <button class="navigation" type="submit">ABOUT</button>
+                </form>
+                <form action="../templates/genre.html">
+                    <button class="rate" type="submit">GENRES</button>
+                </form>
+                <form action="../templates/actor.html">
+                    <button class="navigation" type="submit">ACTORS</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main>
+  <div id="details">
+
+    <h2>CREATE ACCOUNT</h2>
+
+    <form id="registerForm">
+
+      <div class="input-group">
+        <h3>USERNAME:</h3>
+        <input type="text" id="username" required>
+      </div>
+
+      <div class="input-group">
+        <h3>PHONE NUMBER:</h3>
+        <input type="text" id="phone" required>
+      </div>
+
+      <div class="input-group">
+        <h3>EMAIL:</h3>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <h3>CREATE A PASSWORD:</h3>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="input-group">
+        <h3>CONFIRM PASSWORD:</h3>
+        <input type="password" id="confirmPassword" required>
+      </div>
+
+      <button type="submit" class="submit-btn">CONFIRM</button>
+
+    </form>
+
+  </div>
+</main>
+
+
+    <script src="../static/js/script_register.js"></script>
+    
+</body>
+</html>

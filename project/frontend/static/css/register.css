@@ -1,0 +1,182 @@
+/* --- GLOBAL RESET --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- NAVBAR (OPTIMIZED) --- */
+.navbar {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.website_logo {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.f2 {
+    height: 100px;
+    flex-grow: 1; 
+    border-radius: 50px;
+    background-color: #535151;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    min-width: 600px;
+}
+
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: 'Jaini Purva', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation, .rate {
+    padding: 0 25px; 
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #1F1D1DF2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation:hover, .rate:hover {
+    background-color: #689fe7;
+}
+
+/* --- MAIN LAYOUT --- */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Horizontally Center */
+    align-items: center;     /* Vertically Center */
+    padding: 40px 20px;      /* Safety padding for mobile */
+}
+
+/* --- REGISTRATION BOX --- */
+#details {
+    width: 100%;
+    max-width: 580px; 
+    padding: 40px;
+    border-radius: 50px;
+    background-color: #82298B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#details h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- FORM STYLING --- */
+#registerForm {
+    width: 100%;
+    max-width: 450px; /* Controls max width of inputs */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Group: keeps Label and Input together */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-left: 10px; /* Small alignment tweak */
+}
+
+.input-group input {
+    width: 100%; /* Fills the group width */
+    height: 44px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #D9D9D9;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    background-color: #ffffff;
+}
+
+/* --- BUTTON STYLING --- */
+.submit-btn {
+    width: 200px;
+    height: 44px;
+    background-color: #D9D9D9;
+    border-radius: 50px;    
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}

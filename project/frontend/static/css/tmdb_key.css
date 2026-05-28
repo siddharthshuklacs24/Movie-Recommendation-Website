@@ -1,0 +1,100 @@
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: url("../media/images/background2.png") no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- WRAPPER --- */
+.tmdb-wrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- CARD --- */
+.tmdb-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #82298B;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  color: white;
+  text-align: center;
+}
+
+/* --- TEXT --- */
+.tmdb-card h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.tmdb-card p {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+/* --- FORM --- */
+#tmdbForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- INPUT --- */
+#tmdbKey {
+  height: 42px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+#tmdbKey:focus {
+  outline: 2px solid #CF9ECC;
+}
+
+/* --- BUTTON --- */
+#tmdbForm button {
+  height: 42px;
+  border-radius: 50px;
+  border: none;
+  background-color: #CF9ECC;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#tmdbForm button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* --- STATUS --- */
+#status {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#status.error {
+  color: #ffd2d2;
+}
+
+#status.success {
+  color: #b8ffb8;
+}

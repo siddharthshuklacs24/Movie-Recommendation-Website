@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CineMatch</title>
+    <link rel="stylesheet" href="../static/css/about.css">
+</head>
+<body>
+
+<div class="navbar">
+    <img class="website_logo" src="../static/media/images/website_logo.png"
+         alt="website logo"
+         onclick="location.href='homepage.html'"
+         style="cursor:pointer">
+
+    <div class="f2">
+        <div class="f2-left">
+            <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg" alt="bmsce logo">
+            <h1 class="bmsce">BMSCE</h1>
+        </div>
+
+        <div class="buttons">
+            <form action="movie_search.html">
+                    <button class="rate" type="submit">SEARCH</button>
+                </form>
+
+            <form action="../templates/actor.html">
+                <button class="navigation" type="submit">ACTOR</button>
+            </form>
+            
+            <form action="../templates/genre.html">
+                <button class="navigation" type="submit">GENRE</button>
+            </form>
+
+            <!-- LOGIN (shown when logged out) -->
+            <form id="loginBtnForm" action="../templates/login.html">
+                <button class="navigation" type="submit">LOGIN</button>
+            </form>
+
+            <!-- LOGOUT (shown when logged in) -->
+            <button id="logoutBtn" class="navigation" style="display:none;">LOGOUT</button>
+            <h3 id="hellousername" style="color:white; display:none;"></h3>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="about-container">
+
+        <div class="content-block">
+            <h2 class="section-title">About Us :</h2>
+            <div class="text-content">
+                This website helps users discover movies they will enjoy by recommending films based on genres, movie similarity, and user preferences.
+                <ul>
+                    <li><strong>Purpose:</strong> Suggest users their preferred type of movie</li>
+                    <li><strong>Ease:</strong> Easy navigation for finding a movie</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2 class="section-title">Purpose :</h2>
+            <div class="text-content">
+                With thousands of movies released every year, finding the right one to watch can be overwhelming.
+                This project was developed as part of academic coursework at BMS College of Engineering.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2 class="section-title">Features :</h2>
+            <div class="text-content">
+                <ul>
+                    <li>Smart movie recommendations</li>
+                    <li>Browse by genre or actor</li>
+                    <li>User-friendly navigation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2 class="section-title">Website Developers :</h2>
+            <div class="text-content">
+                <ul>
+                    <li>Shrihari Viswanathan</li>
+                    <li>Shrey Pandarathil</li>
+                    <li>Siddharth Shukla</li>
+                    <li>Shashank Shinde</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>CineMatch © 2025</p>
+</footer>
+
+<script>
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = localStorage.getItem("username");
+
+    const loginForm = document.getElementById("loginBtnForm");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const helloUser = document.getElementById("hellousername");
+
+    if (isLoggedIn) {
+        loginForm.style.display = "none";
+        logoutBtn.style.display = "inline-block";
+        helloUser.style.display = "inline-block";
+        helloUser.innerText = `Hello, ${username}!`;
+    }
+
+    logoutBtn.addEventListener("click", () => {
+        if (confirm("Are you sure you want to logout?")) {
+            localStorage.clear();
+            window.location.href = "login.html";
+        }
+    });
+</script>
+
+</body>
+</html>

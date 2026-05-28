@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CineMatch</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+
+<body>
+    <div class="navbar">
+       <img class="website_logo" src="../static/media/images/website_logo.png" alt="website logo"
+        onclick="location.href='homepage.html'" style="cursor:pointer">  
+        
+        <div class="f2">
+            <div class="f2-left">
+                <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg" alt="bmsce logo">
+                <h1 class="bmsce">BMSCE</h1>
+            </div>
+
+            <div class="buttons">
+                <form action="../templates/about us.html">
+                    <button class="navigation" type="submit">ABOUT</button>
+                </form>
+
+                 <form action="movie_search.html">
+                    <button class="rate" type="submit">SEARCH</button>
+                </form>
+                
+                <form action="../templates/genre.html">
+                    <button class="navigation" type="submit">GENRES</button>
+                </form>
+                <form action="../templates/actor.html">
+                    <button class="navigation" type="submit">ACTORS</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div id="WelcomeBack">
+            <h2>WELCOME BACK</h2>
+
+            
+            <p style="font-size: 14px; color: white;">
+                Please log in to continue.
+            </p>
+            
+            <div class="input-group">
+                <h3>USERNAME:</h3>
+                <input type="text" placeholder="Enter Username" id="username">
+            </div>
+
+            <div class="input-group">
+                <h3>PASSWORD:</h3>
+                <input type="password" placeholder="Enter Password" id="password">
+            </div>
+
+            <div id="aftermath">
+                <a id="create" href="../templates/register.html">create an account</a>
+             
+            </div>
+
+            <form id="loginForm">
+                <button class="confirm-btn" type="submit">CONFIRM</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../static/js/script_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details | CineMatch</title>
+    <link rel="stylesheet" href="../static/css/movie_details.css">
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <img class="website_logo" src="../static/media/images/website_logo.png"
+         onclick="location.href='homepage.html'" style="cursor:pointer">
+
+    <div class="f2">
+        <div class="f2-left">
+            <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg">
+            <h1 class="bmsce">BMSCE</h1>
+        </div>
+
+        <div class="buttons">
+            <button class="navigation" onclick="location.href='homepage.html'">HOME</button>
+            <button class="navigation" onclick="location.href='trendrec.html'">TRENDING</button>
+            <button class="navigation" onclick="location.href='watchlist.html'">WATCHLIST</button>
+            <button id="logoutBtn" class="rate">LOGOUT</button>
+            <h3 id="hellousername" class="user-greeting" style="color:white;margin-left:10px;"></h3>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="main-container" id="details-content">
+    <div class="loading-state">
+        <h2 style="color: white; text-align: center; margin-top: 50px;">Loading Movie Details...</h2>
+    </div>
+</div>
+
+<script src="../static/js/movie_details.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* --- GLOBAL RESET --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap');
+
+body {
+    background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif; /* Fallback font */
+}
+
+/* --- NAVBAR (OPTIMIZED) --- */
+.navbar {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.website_logo {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.f2 {
+    height: 100px;
+    flex-grow: 1; /* Fills remaining space */
+    border-radius: 50px;
+    background-color: #535151;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    min-width: 600px;
+}
+
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: 'Jaini Purva', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation, .rate {
+    padding: 0 25px; /* Fluid width */
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #1F1D1DF2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation:hover, .rate:hover {
+    background-color: #689fe7;
+}
+
+/* --- MAIN LAYOUT (Centers the login box) --- */
+main {
+    flex-grow: 1; /* Takes up all space below navbar */
+    display: flex;
+    justify-content: center; /* Horizontally Center */
+    align-items: center;     /* Vertically Center */
+    padding: 20px; /* Prevents box from touching edges on small screens */
+}
+
+/* --- LOGIN BOX --- */
+#WelcomeBack {
+    /* Responsive Dimensions */
+    width: 100%;
+    max-width: 580px; 
+    padding: 40px;
+    
+    border-radius: 50px;
+    background-color: #82298B;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3); /* Adds depth */
+}
+
+#WelcomeBack h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Input Group wrapper ensures labels align with inputs */
+.input-group {
+    width: 100%;
+    max-width: 450px; /* Controls width of inputs */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#WelcomeBack h3 {
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px; /* Slight alignment fix */
+    font-size: 18px;
+}
+
+#WelcomeBack input {
+    width: 100%;
+    height: 44px;
+    padding: 0 15px;
+    border-radius: 10px; /* Softer edges */
+    border: none;
+    background-color: #D9D9D9;
+    font-size: 16px;
+    outline: none;
+}
+
+#WelcomeBack input:focus {
+    background-color: #ffffff; /* Highlight on click */
+}
+
+/* --- LINKS (Create Account / Forgot Password) --- */
+#aftermath {
+    width: 100%;
+    max-width: 450px; /* Match input width */
+    display: flex;
+    justify-content: space-between; /* Pushes links to opposite sides */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#create, #forgot {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+#create:hover, #forgot:hover {
+    color: #eeee25; /* Yellow hover effect */
+    text-decoration: underline;
+}
+
+/* --- CONFIRM BUTTON --- */
+.confirm-btn {
+    width: 200px;
+    height: 44px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.confirm-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}

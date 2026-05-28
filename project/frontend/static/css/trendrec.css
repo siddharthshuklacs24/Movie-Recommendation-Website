@@ -1,0 +1,332 @@
+/* --- GLOBAL RESET --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- NAVBAR (OPTIMIZED) --- */
+.navbar {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.website_logo {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.f2 {
+    height: 100px;
+    flex-grow: 1; 
+    border-radius: 50px;
+    background-color: #535151;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    min-width: 600px;
+}
+
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: 'Jaini Purva', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.movie-gallery {
+    position: relative;
+    
+}
+
+
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 60px;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: -20px;
+}
+
+.scroll-btn.right {
+    right: -20px;
+}
+
+
+.navigation, .rate {
+    padding: 0 25px; 
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #1F1D1DF2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation:hover, .rate:hover {
+    background-color: #689fe7;
+}
+
+/* --- MAIN CONTAINER --- */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
+
+/* --- GENRE SELECTION BOX --- */
+.genre-box h2 {
+    font-family: 'Jaini Purva', cursive;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.genre-input {
+    width: 80%;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Checkbox Hack Style */
+.tags-container input[type="checkbox"] {
+    display: none;
+}
+
+.tags-container label {
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 18px;
+    border: 2px solid #000;
+    background-color: #CF9ECC;
+    transition: 0.2s ease;
+    font-weight: bold;
+}
+
+.tags-container label:hover {
+    filter: brightness(0.9);
+}
+
+.tags-container input:checked + label {
+    background-color: #7c1e87;
+    color: white;
+    border-color: white;
+    transform: scale(0.95);
+}
+
+/* --- HELP BOX (Unable to decide) --- */
+.help-box {
+    justify-content: center; /* Vertically center content */
+}
+
+.help-box h1 {
+    font-family: monospace;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.help-box p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.help-btn {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #CF9ECC;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.help-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* --- MOVIE GALLERY --- */
+.movie-gallery {
+    background-color: #82298B;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.gallery-title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+
+
+
+/* Custom Scrollbar */
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #CF9ECC;
+    border-radius: 4px;
+}
+
+.movie-card {
+    width: 150px;          /* 🔑 force uniform card width */
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-card img {
+    height: 220px; /* Fixed height for uniformity */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.movie-card img:hover {
+    transform: scale(1.05);
+    border-color: #eeee25;
+}
+
+/* --- SCROLL ARROW --- */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    background-color: #D9D9D9;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #ffffff;
+}
+
+/* Hide arrow on mobile */
+@media (max-width: 800px) {
+    .scroll-btn { display: none; }
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

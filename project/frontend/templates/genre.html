@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 🔐 POST-LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres | CineMatch</title>
+    <link rel="stylesheet" href="../static/css/genre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <img class="website_logo" src="../static/media/images/website_logo.png" alt="website logo"
+        onclick="location.href='homepage.html'" style="cursor:pointer"> 
+        
+        <div class="f2">
+            <div class="f2-left">
+                <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg" alt="bmsce logo">
+                <h1 class="bmsce">BMSCE</h1>
+            </div>
+
+            <div class="buttons">
+                <form action="../templates/about us.html">
+                    <button class="navigation" type="submit">ABOUT</button>
+                </form>
+
+                 <form action="movie_search.html">
+                    <button class="rate" type="submit">SEARCH</button>
+                </form>
+                
+                <form action="../templates/actor.html">
+                    <button class="navigation" type="submit">ACTORS</button>
+                </form>
+
+                <!-- 🚪 LOGOUT BUTTON -->
+                <button id="logoutBtn" class="navigation">LOGOUT</button>
+
+                <!-- 👋 USER GREETING (AFTER LOGOUT, WHITE COLOR) -->
+                <h3 id="hellousername" class="user-greeting" style="color: white;"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="top-section">
+            
+            <div class="genre-box">
+                <h2>Select the GENRE:</h2>
+                    <div class="genre-search-wrapper">
+                        <input class="genre-input" type="text" placeholder="Search for a genre...">
+                        <div class="selected-chips" id="selectedChips"></div>
+                        <div class="genre-suggestions"></div>
+                    </div>
+
+
+                
+                <div class="tags-container">
+                    <input type="checkbox" id="action">
+                    <label for="action">ACTION</label>
+
+                    <input type="checkbox" id="thriller">
+                    <label for="thriller">THRILLER</label>
+
+                    <input type="checkbox" id="comedy">
+                    <label for="comedy">COMEDY</label>
+
+                    <input type="checkbox" id="romance">
+                    <label for="romance">ROMANCE</label>
+
+                    <input type="checkbox" id="drama">
+                    <label for="drama">DRAMA</label>
+
+                    <input type="checkbox" id="horror">
+                    <label for="horror">HORROR</label>
+                </div>
+            </div>
+
+            <div class="help-box">
+                <h1>UNABLE TO DECIDE?</h1>
+                <p>Don’t worry! We can help you select a movie starring your favorite actors instead.</p>
+                <form action="../templates/actor.html">
+                    <button class="help-btn" type="submit">FIND ACTORS</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="movie-gallery">
+            <h2 class="gallery-title">POPULAR MOVIES:</h2>
+            <div class="scroll-btn left">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+            
+            <div class="scroll-container"></div>
+
+            <div class="scroll-btn right">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔑 USERNAME DISPLAY + LOGOUT LOGIC -->
+    <script>
+        // Show username
+        const loggedInUsername = localStorage.getItem("username");
+        const helloEl = document.getElementById("hellousername");
+
+        if (loggedInUsername && helloEl) {
+            helloEl.innerText = `Hello, ${loggedInUsername}!`;
+        }
+
+        // Logout logic
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", () => {
+                const confirmLogout = confirm("Are you sure you want to logout?");
+                if (confirmLogout) {
+                    localStorage.clear();
+                    window.location.href = "login.html";
+                }
+            });
+        }
+    </script>
+
+    <script src="../static/js/genres.js"></script>
+
+</body>
+</html>

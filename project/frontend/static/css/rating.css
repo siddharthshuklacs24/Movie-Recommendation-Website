@@ -1,0 +1,62 @@
+body {
+   background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+     font-family: 'Roboto', sans-serif;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.rating-card {
+ 
+  
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.rating-card img {
+  width: 200px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.stars {
+  font-size: 28px;
+}
+
+.stars i {
+  color: #CF9ECC;
+  cursor: pointer;
+}
+
+.stars i.active {
+  color: gold;
+}
+
+button {
+  background: #22c55e;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rate Movie | CineMatch</title>
+
+  <link rel="stylesheet" href="../static/css/rating.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    if (!params.get("id")) {
+      alert("Movie ID missing. Redirecting...");
+      window.location.href = "homepage.html";
+    }
+  </script>
+</head>
+
+<body>
+
+<div class="rating-card">
+  <h2 id="movieTitle">Loading...</h2>
+
+  <img id="poster" src="../static/media/images/default_movie.png" alt="Movie Poster">
+
+  <div class="stars">
+    <i class="fa-solid fa-star" data-val="1"></i>
+    <i class="fa-solid fa-star" data-val="2"></i>
+    <i class="fa-solid fa-star" data-val="3"></i>
+    <i class="fa-solid fa-star" data-val="4"></i>
+    <i class="fa-solid fa-star" data-val="5"></i>
+  </div>
+
+  <p id="ratingText">Your rating: 0</p>
+
+  <button id="saveBtn" type="button">Save Rating</button>
+
+  <p id="status"></p>
+
+  <button id="backBtn" type="button" style="display: none; margin-top: 15px; background-color: #CF9ECC; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%;">
+    Return to Movie
+  </button>
+</div>
+
+<script src="../static/js/rating.js"></script>
+
+</body>
+</html>

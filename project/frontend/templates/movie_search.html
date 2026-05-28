@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 🔐 POST-LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | CineMatch</title>
+
+    <link rel="stylesheet" href="../static/css/movie_search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <img class="website_logo"
+         src="../static/media/images/website_logo.png"
+         onclick="location.href='homepage.html'">
+
+    <div class="f2">
+        <div class="f2-left">
+            <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg">
+            <h1 class="bmsce">BMSCE</h1>
+        </div>
+
+        <div class="buttons">
+            <form action="../templates/about us.html">
+                <button class="navigation">ABOUT</button>
+            </form>
+            <form action="../templates/genre.html">
+                <button class="navigation">GENRES</button>
+            </form>
+            <form action="../templates/actor.html">
+                <button class="navigation">ACTORS</button>
+            </form>
+            <button id="logoutBtn" class="navigation">LOGOUT</button>
+            <h3 id="hellousername"></h3>
+        </div>
+    </div>
+</div>
+
+<div class="main-container">
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <h2>Search for a Movie</h2>
+
+        <form id="searchForm" class="search-form">
+            <input
+                id="searchInput"
+                placeholder="Type a movie name (e.g. Interstellar)"
+            >
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="movie-gallery">
+        <h2 class="gallery-title">SEARCH RESULTS</h2>
+
+        <div class="scroll-btn left">
+            <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
+
+        <div class="scroll-container" id="results"></div>
+
+        <div class="scroll-btn right">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+    </div>
+
+</div>
+<script>
+  // Show username
+  const loggedInUsername = localStorage.getItem("username");
+  const helloEl = document.getElementById("hellousername");
+
+  if (loggedInUsername && helloEl) {
+    helloEl.innerText = `Hello, ${loggedInUsername}!`;
+  }
+
+  // Logout logic
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      const confirmLogout = confirm("Are you sure you want to logout?");
+      if (confirmLogout) {
+        localStorage.clear();
+        window.location.href = "login.html";
+      }
+    });
+  }
+</script>
+
+<script src="../static/js/movie_search.js"></script>
+</body>
+</html>
+

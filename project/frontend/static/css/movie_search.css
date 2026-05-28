@@ -1,0 +1,208 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.website_logo {
+    height: 80px;
+    cursor: pointer;
+}
+
+.f2 {
+    flex: 1;
+    background: #535151;
+    border-radius: 50px;
+    height: 100px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: 'Jaini Purva', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navigation {
+   padding: 0 25px; 
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #1F1D1DF2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation:hover {
+    background: #689fe7;
+}
+
+#hellousername {
+    color: white;
+}
+
+/* MAIN */
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* SEARCH */
+/* SEARCH BOX — MATCH SEARCH RESULTS */
+.search-box {
+    background: #82298B;              /* SAME as movie-gallery */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* TITLE — SAME STYLE AS SEARCH RESULTS */
+.search-box h2 {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: monospace;            /* matches gallery-title */
+}
+
+
+.search-form {
+    display: flex;
+    gap: 15px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    background: #ffffff;
+}
+
+
+.search-form button {
+    padding: 0 28px;
+    border-radius: 12px;
+    border: none;
+    background: #CF9ECC;   /* same accent used elsewhere */
+    color: #1f1f1f;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-form button:hover {
+    background: #ffffff;
+}
+
+
+/* GALLERY */
+.movie-gallery {
+    background: #82298B;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+.gallery-title {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.movie-card img {
+    height: 220px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie-card img:hover {
+    transform: scale(1.05);
+}
+
+/* ARROWS */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #D9D9D9;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-btn.left { left: -20px; }
+.scroll-btn.right { right: -20px; }
+
+@media (max-width: 800px) {
+    .scroll-btn { display: none; }
+}

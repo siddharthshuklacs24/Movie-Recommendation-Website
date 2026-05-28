@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Rated Movies | CineMatch</title>
+    <link rel="stylesheet" href="../static/css/homepage.css">
+    <link rel="stylesheet" href="../static/css/rated_movies.css">
+</head>
+<body>
+
+<div class="navbar">
+    <img class="website_logo" src="../static/media/images/website_logo.png" 
+         onclick="location.href='homepage.html'" style="cursor:pointer">
+
+    <div class="f2">
+        <div class="f2-left">
+            <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg">
+            <h1 class="bmsce">BMSCE</h1>
+        </div>
+
+        <div class="buttons">
+            <button class="navigation" onclick="location.href='homepage.html'">HOME</button>
+            <button class="rate active-nav" onclick="location.href='actor.html'">ACTORS</button>
+            <button class="navigation" onclick="location.href='genre.html'">GENRES</button>
+            <button id="logoutBtn" class="rate">LOGOUT</button>
+            <h3 id="hellousername" class="user-greeting" style="color:white;margin-left:10px;"></h3>
+        </div>
+    </div>
+</div>
+
+<div class="main-content-wrapper">
+    <div style="padding: 20px;">
+        <h1 class="page-title">Movies You've Rated</h1>
+        <div id="rated-grid" class="movie-grid">
+            <p id="loading-text" style="color: white;">Loading your ratings...</p>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/rated_movies.js"></script>
+</body>
+
+</html>

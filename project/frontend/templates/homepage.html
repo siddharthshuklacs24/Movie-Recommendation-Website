@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Login Protection: Redirect to login if not authenticated
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "../templates/login.html";
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CineMatch</title>
+
+    <link rel="stylesheet" href="../static/css/homepage.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <img class="website_logo" src="../static/media/images/website_logo.png" alt="website logo"
+             onclick="location.href='homepage.html'" style="cursor:pointer"> 
+        
+        <div class="f2">
+            <div class="f2-left">
+                <img class="bms_logo" src="../static/media/images/bmsce_logo.jpeg" alt="bmsce logo">
+                <h1 class="bmsce">BMSCE</h1>
+            </div>
+            <div class="f2-right">
+                <div class="buttons">
+                    <form action="../templates/About us.html">
+                        <button class="navigation" type="submit">ABOUT</button>
+                    </form>
+
+                    <form action="rated_movies.html">
+                        <button class="navigation" type="submit">MY RATINGS</button>
+                    </form>
+
+                    <form action="movie_search.html">
+                        <button class="rate" type="submit">SEARCH</button>
+                    </form>
+
+                    <button class="navigation" onclick="location.href='watchlist.html'">WATCHLIST</button>
+                    
+                    <form action="../templates/genre.html">
+                        <button class="navigation" type="submit">GENRES</button>
+                    </form>
+
+                    <form action="../templates/actor.html">
+                        <button class="navigation" type="submit">ACTORS</button>
+                    </form>
+
+                    <button id="logoutBtn" class="rate">LOGOUT</button>
+                </div>
+                
+                <h3 id="hellousername" class="user-greeting" ></h3>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+        <div id="welcome">
+            <h1 id="welh1">WELCOME</h1>
+            <p>
+                Finding the perfect movie shouldn’t be hard. At CineMatch, we make it effortless by
+                recommending the best movies based on your mood and preferences. Whether you’re in
+                the mood for thrilling action, laugh-out-loud comedy, heartfelt drama, or
+                mind-bending suspense, we’ve got you covered.
+            </p>
+        </div>
+
+        <div class="movie-grid">
+            <div class="movie-column" id="pictures2">
+                <h2>craving some hollywood?</h2>
+                <img src="../static/media/images/the_aviator.jpeg" alt="the aviator" onclick="location.href='movie_details.html?id=2567'" style="cursor:pointer;">
+                <img src="../static/media/images/inception.jpeg" alt="inception" onclick="location.href='movie_details.html?id=27205'" style="cursor:pointer;">
+                <img src="../static/media/images/top_gun.jpeg" alt="top gun maverick" onclick="location.href='movie_details.html?id=361743'" style="cursor:pointer;">
+            </div>
+
+            <div class="movie-column" id="pictures1">
+                <h2>or maybe some bollywood?</h2>
+                <img src="../static/media/images/bajirao.jpeg" alt="bajirao mastani" onclick="location.href='movie_details.html?id=362045'" style="cursor:pointer;">
+                <img src="../static/media/images/pk.jpeg" alt="pk" onclick="location.href='movie_details.html?id=297222'" style="cursor:pointer;">
+            </div>
+
+            <div class="movie-column" id="pictures3">
+                <h2>or some south indian dhamaka?</h2>
+                <img src="../static/media/images/bahubali.jpeg" alt="bahubali" onclick="location.href='movie_details.html?id=256040'" style="cursor:pointer;">
+                <img src="../static/media/images/kgf.jpeg" alt="kgf" onclick="location.href='movie_details.html?id=564147'" style="cursor:pointer;">
+                <img src="../static/media/images/vikram.jpeg" alt="vikram" onclick="location.href='movie_details.html?id=743563'" style="cursor:pointer;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Logic to display the logged-in username
+        const loggedInUsername = localStorage.getItem("username");
+        const helloEl = document.getElementById("hellousername");
+
+        if (loggedInUsername && helloEl) {
+            helloEl.innerText = `Hello, ${loggedInUsername}!`;
+        }
+
+        // 2. Logout Logic with confirmation
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", () => {
+                const confirmLogout = confirm("Are you sure you want to logout?");
+                if (confirmLogout) {
+                    localStorage.clear();
+                    window.location.href = "login.html";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

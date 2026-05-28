@@ -1,0 +1,183 @@
+/* --- GLOBAL RESET --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-image: url(../media/images/background2.png
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- NAVBAR (OPTIMIZED) --- */
+.navbar {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.website_logo {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.f2 {
+    height: 100px;
+    flex-grow: 1; 
+    border-radius: 50px;
+    background-color: #535151;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    min-width: 600px;
+}
+
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: 'Jaini Purva', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation, .rate {
+    padding: 0 25px; 
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #1F1D1DF2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation:hover, .rate:hover {
+    background-color: #689fe7;
+}
+
+/* --- USER GREETING TEXT --- */
+.user-greeting {
+    color: white;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* --- MAIN CONTAINER --- */
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* --- WELCOME BOX --- */
+#welcome {
+    width: 100%;
+    max-width: 600px;
+    background-color: #09c064db;
+    border-radius: 50px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#welcome h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#welcome p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* --- MOVIE GRID SYSTEM --- */
+.movie-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap; /* Prevents layout breaking on small screens */
+}
+
+.movie-column {
+    width: 330px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent bg */
+    border: 10px solid #FFFF51;
+    border-radius: 20px;
+    padding: 20px 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-column h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.movie-column img {
+    width: 250px;
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.movie-column img:hover {
+    transform: scale(1.1);
+}
+

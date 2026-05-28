@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMDB Key</title>
+
+  <link rel="stylesheet" href="../static/css/tmdb_key.css" />
+</head>
+<body>
+
+  <main class="tmdb-wrapper">
+    <section class="tmdb-card">
+
+      <h2>Enter TMDB API Key</h2>
+      <p>Please provide your TMDB API key to continue</p>
+
+      <form id="tmdbForm">
+        <input
+          id="tmdbKey"
+          type="text"
+          placeholder="TMDB API Key"
+          required
+        />
+        <button type="submit">Save</button>
+      </form>
+
+      <p id="status"></p>
+
+    </section>
+  </main>
+
+  <script src="../static/js/tmdb_key.js"></script>
+</body>
+</html>

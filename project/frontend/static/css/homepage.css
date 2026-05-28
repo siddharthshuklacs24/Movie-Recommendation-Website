@@ -1,0 +1,234 @@
+/* --- RESET & DEFAULTS --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-image: url(../media/images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- NAVBAR START --- */
+.navbar {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative; 
+    z-index: 100;
+}
+
+.website_logo {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Gray Bar */
+.f2 {
+    flex-grow: 1;
+    min-height: 100px;
+    border-radius: 50px;
+    background-color: #535151;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    min-width: 600px;
+}
+
+/* Logo + Text Group */
+.f2-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.bms_logo {
+    height: 80px;
+    width: auto;
+}
+
+.bmsce {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 32px;   /* slightly reduced to fit */
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+.f2-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* ⭐ THIS IS THE KEY */
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;          /* reduced gap for better spacing */
+    flex-wrap: wrap;    /* wrap on smaller screens */
+}
+
+/* Shared Button Styles */
+.navigation, .rate {
+    padding: 0 20px;    /* reduced padding */
+    height: 40px;
+    border-radius: 50px;
+    background-color: #97C4FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;    /* slightly smaller for fit */
+    color: #1F1D1DF2;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.navigation:hover, .rate:hover {
+    background-color: #689fe7;
+}
+
+/* User Greeting */
+.user-greeting {
+    color:white;
+    white-space: nowrap;
+    overflow: visible;     /* show full username */
+    text-overflow: clip;
+    font-size: 1rem;
+    
+    max-width: 100%;       /* allows full display */
+}
+
+/* --- MAIN CONTENT START --- */
+.main-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+#welcome {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #09c064db;
+    text-align: center;
+    margin-bottom: 60px;
+    color: black;
+}
+
+#welcome h1 {
+    font-size: 36px;      /* slightly smaller for better fit */
+    margin-bottom: 15px;
+}
+
+#welcome p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Movie Grid */
+.movie-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;           /* slightly smaller gap */
+    width: 100%;
+    max-width: 1400px;
+    flex-wrap: wrap;
+}
+
+/* Movie Columns */
+.movie-column {
+    width: 300px;          /* slightly smaller for reasonable size */
+    border-radius: 20px;
+    border: 8px solid #eeee25;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-column h2 {
+    color: white;
+    margin: 15px 0;
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.movie-column img {
+    width: 230px;          /* adjusted size */
+    height: 160px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.movie-column img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+    .bmsce {
+        font-size: 28px;
+    }
+    .navigation, .rate {
+        font-size: 16px;
+        padding: 0 16px;
+    }
+    .movie-column {
+        width: 45%;
+    }
+    #welcome h1 {
+        font-size: 28px;
+    }
+    #welcome p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bmsce {
+        font-size: 22px;
+    }
+    .movie-column {
+        width: 90%;
+    }
+    .navigation, .rate {
+        font-size: 14px;
+        padding: 0 12px;
+    }
+    #welcome h1 {
+        font-size: 20px;
+    }
+    #welcome p {
+        font-size: 12px;
+    }
+}
